@@ -1,0 +1,31 @@
+body {
+    background-color: #1C2128;
+}
+
+.news-container {
+    display: flex;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+}
+
+.ia {
+    display: flex;
+    flex-direction: row;
+}
+
+.ia span {
+    color: white;
+    background: red;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    
+}
+
+

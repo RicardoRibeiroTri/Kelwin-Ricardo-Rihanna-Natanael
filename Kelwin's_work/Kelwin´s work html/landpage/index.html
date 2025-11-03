@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <div class="logo-container">
+        <link rel="stylesheet" href="reset.css">
+        <link rel="icon" type="image/png" href="/landpage/source/assets/images/logo-mnf.png">
+    </div>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f7f2f2;
+            background-image: url('/landpage/source/assets/images/farialimer-night.jpg');
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            background-attachment: fixed;
+            color: #fff;
+            overflow-x: hidden;
+            position: relative;
+        }
+        
+        .container {
+            max-width: 420px;
+            margin: 0 auto;
+            padding: 20px;
+            border-radius: 30px;
+            box-shadow: 0 0 30px rgba(251, 250, 250, 0.5);
+            position: relative;
+        }
+        
+        .background-image {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-attachment: fixed;
+            filter: brightness(0.6) contrast(1.2);
+            z-index: -1;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .login-prompt {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 20px;
+            padding: 10px 20px;
+            margin-bottom: 30px;
+            text-align: center;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        
+        .logo-container {
+             display: flex;
+             justify-content: center;
+             align-items: center;
+             margin-bottom: 30px;
+             width: 100%;
+             max-width: 100%;
+             padding: 0 12px;
+             box-sizing: border-box;
+             height: auto;
+             overflow: hidden;
+        }
+
+        .logo-border {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+        }
+
+        .logo img {
+            display: block;
+            max-width: 260px;
+            width: 100%;
+            height: auto;
+        }
+
+        .subtitle {
+            font-size: 14px;
+            color: #aaa;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+        }
+        
+        .welcome-text {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 18px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #ccc;
+        }
+        
+        .mission-box {
+            background: rgba(255, 255, 255, 0.05);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            padding: 25px;
+            margin-bottom: 30px;
+            text-align: center;
+            font-size: 18px;
+            line-height: 1.5;
+        }
+        
+        .footer {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .credits, .sponsorship {
+            text-align: center;
+        }
+        
+        .credits h3, .sponsorship h3 {
+            color: #ff3333;
+            font-size: 14px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .credits p, .sponsorship p {
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+        
+        .app-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .app-button {
+            display: flex;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 10px 15px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .app-button:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+        }
+        
+        .app-icon.playstore {
+            width: 30px;
+            height: 30px;
+            margin-right: 10px;
+            border-radius: 5px;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            flex: 0 0 30px;
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRE6kG5kF5AD65In7MHznn1zcK3n1M0zZACCg&s');
+            
+        }
+
+        .app-icon {
+            width: 30px;
+            height: 30px;
+            margin-right: 10px;
+            border-radius: 5px;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            flex: 0 0 30px;
+        }
+
+        .app-icon.custom {
+            background-image: url('https://i.pinimg.com/736x/49/2e/73/492e7351beeb09b6c4568119a699c6ed.jpg');
+        }
+
+        .app-icon.playstore {
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRE6kG5kF5AD65In7MHznn1zcK3n1M0zZACCg&s'); 
+        }
+        .app-icon.appstore {
+            background-image: url('https://i.pinimg.com/736x/49/2e/73/492e7351beeb09b6c4568119a699c6ed.jpg');
+        }
+
+        .app-text {
+            font-size: 12px;
+            text-align: left;
+        }
+        
+        .app-title {
+            font-weight: bold;
+            margin-bottom: 2px;
+        }
+        
+        .app-store {
+            font-size: 10px;
+            color: #aaa;
+        }
+        
+        @media (max-width: 480px) {
+            .container {
+                margin: 10px;
+                padding: 15px;
+                border-radius: 20px;
+            }
+            
+            .logo {
+                font-size: 36px;
+            }
+            
+            .mission-box {
+                padding: 15px;
+                font-size: 16px;
+            }
+            
+            .footer {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            .app-buttons {
+                flex-direction: column;
+                align-items: stretch;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="background-image">
+        <img src="/landpage/source/assets/images/farialimer-night.jpg" alt="Background Image">
+    </div>
+    <div class="container">
+        <div class="header">
+            <div class="login-prompt">Já tem uma conta?</div>
+            
+            <div class="logo-container">
+                <div class="logo-border">
+                    <div class="logo"><img src="./source/assets/icon/NOVA_LOGO-removebg-preview 3.svg"></div>
+                </div>
+            </div>
+            
+            <div class="subtitle">No Combate A Fake News</div>
+            
+            <div class="welcome-text">WELCOME TO ONLY SITE THAT MATTERS</div>
+            
+            <div class="mission-box">
+                A MNF nasceu com uma missão: restaurar a confiança na informação.
+            </div>
+        </div>
+        
+        <div class="footer">
+            <div class="credits">
+                <h3>MADE & DEVELOPED BY</h3>
+                <p>Dr.Kelwin<br>Rihanna<br>Ricardo<br>Natanael</p>
+            </div>
+            
+            <div class="sponsorship">
+                <h3>SPONSORSHIP by</h3>
+                <p>Senai</p>
+                
+                <div class="app-buttons">
+        <div class="app-button">
+            <div class="app-icon playstore"></div>
+            <div class="app-text">
+                <div class="app-title">GET IT ON</div>
+                <div class="app-store">Google Play</div>
+            </div>
+        </div>
+    
+        <div class="app-button">
+            <div class="app-icon appstore"></div>
+            <div class="app-text">
+                <div class="app-title">Download on the</div>
+                <div class="app-store">App Store</div>
+            </div>
+        </div>
+</div>
+                </div>
+        </div>
+    </div>
+</body>
+</html>
+

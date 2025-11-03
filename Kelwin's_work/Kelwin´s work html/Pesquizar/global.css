@@ -1,0 +1,53 @@
+:root {
+    --primary-color: #FF4D4D;
+    --background-dark: #121212;
+    --surface-dark: #1E1E1E;
+    --border-color: #333;
+    --text-primary: #FFFFFF;
+    --text-secondary: #AAAAAA;
+    --spacing-xs: 4px;
+    --spacing-sm: 8px;
+    --spacing-md: 16px;
+    --spacing-lg: 24px;
+    --border-radius-sm: 8px;
+    --border-radius-md: 16px;
+    --border-radius-lg: 25px;
+    --border-radius-pill: 999px;
+}
+
+body {
+    background-color: var(--background-dark);
+    color: var(--text-primary);
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: var(--spacing-md);
+}
+
+/* Button styles */
+.btn {
+    background-color: var(--surface-dark);
+    border: none;
+    border-radius: var(--border-radius-sm);
+    color: var(--text-primary);
+    cursor: pointer;
+    padding: var(--spacing-sm) var(--spacing-md);
+    transition: all 0.2s ease;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+/* Card styles */
+.card {
+    background-color: var(--surface-dark);
+    border-radius: var(--border-radius-md);
+    padding: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+}

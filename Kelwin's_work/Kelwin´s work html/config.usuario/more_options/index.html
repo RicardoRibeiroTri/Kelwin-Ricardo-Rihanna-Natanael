@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More Options - M.N.F</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #121212;
+            color: white;
+            padding: 20px;
+            max-width: 500px;
+            margin: 0 auto;
+            border-radius: 20px;
+            overflow-x: hidden;
+            justify-content: space-between 20px;
+        }
+
+        .container {
+            background-color: #121212;
+            border-radius: 20px;
+            padding: 30px;
+            width: 100%;
+            max-width: 400px;
+            box-shadow: 0 4px 20px lightgrey;
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .back-arrow {
+            font-size: 24px;
+            color: white;
+            margin-right: 15px;
+            cursor: pointer;
+            inline-size: 24px;
+            margin-left: -69px;
+        }
+
+        .logo {
+            color: #ff3b30;
+            font-weight: bold;
+            font-size: 24px;
+            letter-spacing: 2px;
+            margin-left: 55px;
+        }
+
+        h2 {
+            color: white;
+            text-align: center;
+            margin-bottom: 30px;
+            font-weight: 500;
+        }
+
+        .option-button {
+            display: flex;               /* alinha ícone + texto */
+            align-items: center;
+            justify-content: center;     /* centraliza o conteúdo do botão */
+            width: 100%;
+            padding: 12px 20px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            text-decoration: none;
+            color: white;
+            border: 2px solid transparent;
+            background-color: transparent; /* padrão neutro */
+            gap: 10px;                   /* espaço entre texto e ícone */
+            box-sizing: border-box;
+            text-align: center;          /* fallback */
+        }
+
+        .option-button.change-account {
+            background-color: transparent;
+            border: 2px solid #ffffff; /* borda branca */
+            color: #ffffff;
+        }
+
+        /* Botões de ação/danger (logout, disable, delete) */
+        .option-button.danger {
+            background-color: #121212;
+            color: #ff3b30;
+            border-color: #ff3b30;
+        }
+
+        .option-button.danger:hover {
+            background-color: #121212;
+            border-color: #e0332a;
+        }
+
+        /* Ícones inline */
+        .option-button span {
+            margin-left: 5px;
+            font-size: 14px;
+        }
+
+        .option-button img {
+            width: 24px;                 /* tamanho consistente do ícone */
+            height: 24px;
+            object-fit: contain;
+            display: inline-block;
+            margin: 0;                   /* sem margem extra (gap controla espaçamento) */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="back-arrow"></div>
+            <img src="./source/assets/icons/Arrow up-right.svg" alt="Arrow up-right">
+            <div class="logo"></div>
+            <img src="./source/assets/icons/m.n.f.svg" alt="logo">
+        </div>
+
+        <h2>More options +</h2>
+
+        <a href="#" class="option-button change-account">Change account</a>
+        <a href="#" class="option-button danger">Log-out <span></span>
+        <img src="./source/assets/icons/Log out.svg" alt="Log-out"></a>
+        <a href="#" class="option-button danger">Disable account <span>⊖</span></a>
+        <a href="#" class="option-button danger">Delete account <span></span>
+        <img src="./source/assets/icons/Trash 2.svg" alt="Trash"></a>
+    </div>
+</body>
+</html>
+

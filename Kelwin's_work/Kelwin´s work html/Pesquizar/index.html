@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultados de Pesquisa</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #121212;
+            color: white;
+            padding: 20px;
+            max-width: 400px;
+            margin: 0 auto;
+            border-radius: 20px;
+            overflow-x: hidden;
+        }
+        
+        .header {
+            display: flex;
+            padding: 7.5px 10px;
+            border-bottom: 1px solid #333;
+        }
+        
+        .back-button {
+            align-items: start;
+            font-size: 24px;
+            color: white;
+            cursor: pointer;
+        }
+
+        .logo-icon {
+            width: 100px;
+            height: 55px;
+            display: flex;
+            align-items: flex-end;
+            justify-content: flex-end;
+            margin: 0 auto;
+            flex: 0 0 auto;
+            box-sizing: border-box;
+        }
+
+        .logo-img {
+            max-width: 100%;
+            max-height: 100%;
+            width: 100px;
+            height: 35px;
+            display: flex;
+            margin-left: 100px;
+        }
+        
+        .search-bar {
+            display: flex;
+            align-items: center;
+            background-color: #1E1E1E;
+            border-radius: 25px;
+            padding: 10px 15px;
+            margin: 15px 20px;
+        }
+        
+        .search-input {
+            flex: 1;
+            background: transparent;
+            border: none;
+            color: white;
+            font-size: 16px;
+            outline: none;
+            padding: 5px;
+        }
+        
+        .search-icon {
+            color: white;
+            font-size: 20px;
+            margin-left: 10px;
+        }
+        
+        .filter-section {
+            display: flex;
+            justify-content: space-between;
+            padding: 0 20px;
+            margin-bottom: 15px;
+        }
+        
+        .filter-btn {
+            background: transparent;
+            border: none;
+            color: #999;
+            font-size: 14px;
+            cursor: pointer;
+        }
+        
+        .filter-icon {
+            width: 30px;
+            height: 30px;
+            background: #2A2A2A;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            margin: 0 8px;
+        }
+        .filter-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .section-title {
+            color: #FF4D4D;
+            font-weight: bold;
+            text-transform: uppercase;
+            padding: 10px 20px;
+            margin-top: 10px;
+        }
+        
+        .news-list {
+            padding: 0 20px;
+        }
+        
+        .news-item {
+            display: flex;
+            margin-bottom: 15px;
+            background-color: #1E1E1E;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+        }
+        
+        .news-image {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+        }
+        
+        .news-content {
+            padding: 10px;
+            flex: 1;
+        }
+        
+        .news-title {
+            font-weight: bold;
+            margin-bottom: 5px;
+            line-height: 1.3;
+        }
+        
+        .news-time {
+            color: #FF4D4D;
+            font-size: 12px;
+        }
+        
+        .home-button {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #FF4D4D;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+            cursor: pointer;
+        }
+        .e-button {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #FF4D4D;       /* fundo vermelho */
+    color: #fff;
+    padding: 10px 16px;        /* formato de pílula */
+    border-radius: 999px;      /* pílula */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+    cursor: pointer;
+    z-index: 9999;
+}
+.e-button img {
+    width: 28px;
+    height: 28px;
+    display: block;
+    object-fit: contain;
+}
+.e-button:active,
+.e-button:focus,
+.e-button:hover {
+    transform: translateX(-50%) scale(0.98);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.35);
+}
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="back-button">←</div>
+        <div class='./source/assets/icons/m.n.f.svg'></div>
+        <div>
+            <img src="./source/assets/icons/m.n.f.svg" alt="M.N.F" class="logo-img">
+        </div>
+        <div></div> <!-- Placeholder for right side -->
+    </div>
+    
+    <div class="search-bar">
+        <input type="text" class="search-input" placeholder="Pesquisar...">
+        <div class="search-icon">
+            <img src="./source/assets/icons/search.svg" alt="Search">
+        </div>
+    </div>
+    
+    <div class="filter-section">
+    <button class="filter-btn">filter?</button>
+    <div class="filter-icon" aria-hidden="true">
+        <img src="./source/assets/images/Gemini_Generated_Image_agzgqpagzgqpagzg%202.png" alt="Filtro">
+    </div>
+
+    <button class="filter-btn">concluir?</button>
+</div>
+    
+    <div class="section-title">ÚLTIMAS NOTÍCIAS</div>
+    
+    <div class="news-list">
+        <div class="news-item">
+            <img src="./source/assets/images/image 6.png" alt="News Image" class="news-image">
+            <div class="news-content">
+                <div class="news-title">US Counterintelligence warns of spy risks to space technology</div>
+                <div class="news-time">7 hours ago</div>
+            </div>
+        </div>
+        
+        <div class="news-item">
+            <img src="./source/assets/images/image 7.png" alt="News Image" class="news-image">
+            <div class="news-content">
+                <div class="news-title">US Counterintelligence warns of spy risks to space technology</div>
+                <div class="news-time">7 hours ago</div>
+            </div>
+        </div>
+        
+        <div class="news-item">
+            <img src="./source/assets/images/image 5.png" alt="News Image" class="news-image">
+            <div class="news-content">
+                <div class="news-title">US Counterintelligence warns of spy risks to space technology</div>
+                <div class="news-time">7 hours ago</div>
+            </div>
+        </div>
+
+        <div class="news-item">
+            <img src="./source/assets/images/image 6.png" alt="News Image" class="news-image">
+            <div class="news-content">
+                <div class="news-title">US Counterintelligence warns of spy risks to space technology</div>
+                <div class="news-time">7 hours ago</div>
+            </div>
+        </div>
+        
+        <div class="news-item">
+            <img src="./source/assets/images/image 7.png" alt="News Image" class="news-image">
+            <div class="news-content">
+                <div class="news-title">US Counterintelligence warns of spy risks to space technology</div>
+                <div class="news-time">7 hours ago</div>
+            </div>
+        </div>
+        
+        <div class="news-item">
+            <img src="./source/assets/images/image 5.png" alt="News Image" class="news-image">
+            <div class="news-content">
+                <div class="news-title">US Counterintelligence warns of spy risks to space technology</div>
+                <div class="news-time">7 hours ago</div>
+            </div>
+        </div>
+
+        <div class="news-item">
+            <img src="./source/assets/images/image 6.png" alt="News Image" class="news-image">
+            <div class="news-content">
+                <div class="news-title">US Counterintelligence warns of spy risks to space technology</div>
+                <div class="news-time">7 hours ago</div>
+            </div>
+        </div>
+        
+        <div class="news-item">
+            <img src="./source/assets/images/image 7.png" alt="News Image" class="news-image">
+            <div class="news-content">
+                <div class="news-title">US Counterintelligence warns of spy risks to space technology</div>
+                <div class="news-time">7 hours ago</div>
+            </div>
+        </div>
+        
+        <div class="news-item">
+            <img src="./source/assets/images/image 5.png" alt="News Image" class="news-image">
+            <div class="news-content">
+                <div class="news-title">US Counterintelligence warns of spy risks to space technology</div>
+                <div class="news-time">7 hours ago</div>
+            </div>
+        </div>
+        
+        <div class="news-item">
+            <img src="./source/assets/images/image 6.png" alt="News Image" class="news-image">
+            <div class="news-content">
+                <div class="news-title">US Counterintelligence warns of spy risks to space technology</div>
+                <div class="news-time">7 hours ago</div>
+            </div>
+        </div>
+        
+        <div class="news-item">
+            <img src="./source/assets/images/image 7.png" alt="News Image" class="news-image">
+            <div class="news-content">
+                <div class="news-title">US Counterintelligence warns of spy risks to space technology</div>
+                <div class="news-time">7 hours ago</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="./source/assets/icons/prime_home.svg e button"></div>
+    <div class="e-button" role="button" aria-label="Home">
+        <img src="./source/assets/icons/prime_home.svg" alt="Home" width="40" height="40"></div>
+</body>
+</html>
+

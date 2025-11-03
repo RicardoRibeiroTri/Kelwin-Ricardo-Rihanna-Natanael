@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MNF - Enter Phone Number</title>
+    <style>
+         * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #121212;
+            color: white;
+            padding: 20px;
+            max-width: 400px;
+            margin: 0 auto;
+            border-radius: 20px;
+            overflow-x: hidden;
+        }
+
+        .container {
+            background-color: #1e1e1e;
+            border-radius: 20px;
+            padding: 30px;
+            width: 100%;
+            max-width: 400px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .back-arrow {
+            font-size: 24px;
+            color: white;
+            margin-right: 15px;
+            cursor: pointer;
+        }
+
+        .logo {
+            color: #ff3b30;
+            font-weight: bold;
+            font-size: 24px;
+            letter-spacing: 2px;
+            margin-left: 55px;
+        }
+
+        h2 {
+            color: white;
+            text-align: center;
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+        }
+
+        .phone-input-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .country-selector {
+            background-color: #2d2d2d;
+            border: 1px solid #444;
+            border-radius: 8px;
+            padding: 8px 12px;
+            color: white;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .country-selector::after {
+            content: "▼";
+            margin-left: 5px;
+            font-size: 10px;
+        }
+
+        .phone-input {
+            flex: 1;
+            background-color: #2d2d2d;
+            border: 1px solid #444;
+            border-radius: 8px;
+            padding: 10px 15px;
+            color: white;
+            font-size: 16px;
+            outline: none;
+        }
+
+        .phone-input:focus {
+            border-color: #ff3b30;
+        }
+
+        button {
+            background-color: transparent;
+            border: 2px solid #444;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            width: 100%;
+            margin-bottom: 15px;
+            transition: all 0.2s ease;
+        }
+
+        button:hover {
+            background-color: #333;
+            border-color: #ff3b30;
+        }
+
+        button:last-child {
+            margin-bottom: 0;
+        }
+
+        .code-input {
+            width: 100%;
+            background-color: #2d2d2d;
+            border: 1px solid #444;
+            border-radius: 8px;
+            padding: 10px 15px;
+            color: white;
+            font-size: 16px;
+            outline: none;
+            margin-bottom: 20px;
+        }
+
+        .code-input:focus {
+            border-color: #ff3b30;
+        }
+
+        .section-title {
+            color: white;
+            margin-top: 30px;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="back-arrow">←</div>
+            <div class="logo"></div>
+            <img src="./source/assets/icons/m.n.f.svg" alt="logo-img">
+        </div>
+
+        <h2>Enter your phone number:</h2>
+
+        <div class="phone-input-container">
+            <div class="country-selector">+55</div>
+            <input type="tel" class="phone-input" placeholder="Phone number" />
+        </div>
+
+        <button>Send Code</button>
+
+        <div class="section-title">Enter code:</div>
+        <input type="text" class="code-input" placeholder="Code" />
+
+        <button>Confirm</button>
+        <button>Resend code</button>
+    </div>
+</body>
+</html>

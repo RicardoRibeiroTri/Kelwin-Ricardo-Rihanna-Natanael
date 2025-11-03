@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+ <link rel="stylesheet" href="global.css">
+ <link rel="stylesheet" href="reset.css">
+ <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign Up</title>
+</head>
+<body>
+
+  <div class="signup-container">
+<div class="cabecario">
+  
+</div>
+    <a href="#" class="back-button" onclick="window.history.back()">
+      <img src="../imgs/back-button-icon.svg" alt="botão de voltar">
+    </a>
+    <div class="logo">
+      <img src="../imgs/logo sem slogan 2.svg" alt="logo-MNF">
+    </div>
+
+ 
+    <h1>GET STARTED NOW</h1>
+
+    <form class="signup-form">
+
+      <label for="email">E-mail</label>
+      <input  type="email" id="email" name="email" required />
+
+      <label for="password">Password</label>
+      <input  type="password" id="password" name="password" minlength="8" required />
+      <small>Minimum: 8 characters</small>
+
+
+      <div class="enter-button"><button>Enter</button></div>
+
+     <div class="terms-and-conditions">
+        <a href="../src/terms.html">Terms & conditions ⬈</a>
+     </div>
+  
+      <label class="terms">
+        <input type="checkbox" required />
+        I agree with the terms and conditions
+      </label>
+
+   
+      
+        <a href="../sign-in-page/sign-in.html" class="login-link">Already have an account?</a>
+    
+      <button type="button" class="google-button">
+        <img src="../imgs/google-icon.svg" alt="Google icon" />
+        Continue with google
+      </button>
+
+      <button type="button" class="apple-button">
+        <img src="../imgs/apple-icon.svg" alt="Apple icon" />
+        Continue with apple
+      </button>
+
+    </form>
+  </div>
+
+</body>
+</html>

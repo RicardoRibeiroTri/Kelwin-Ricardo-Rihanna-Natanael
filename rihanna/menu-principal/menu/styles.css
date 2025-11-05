@@ -1,0 +1,261 @@
+* {
+  padding:0;
+  margin: 0;
+ font-family: "Inter Tight", sans-serif;
+  
+}
+
+body{
+  background-color: #1C2128;
+}
+.cabecario{
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    position: relative; /* permite posicionar o botão dentro */
+}
+
+.cabecario button {
+  position: absolute;
+  right: 0;
+  top: 70%; /* desce até o meio */
+  transform: translateY(-50%); /* centraliza verticalmente */
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.barra-de-pesquisa {
+  position: relative; /* permite que o botão fique sobre o input */
+  width: 65%;         /* largura da barra */
+  margin: 20px auto; 
+  display: flex;
+  justify-content: center;
+ /* centraliza horizontalmente */
+}
+
+.barra-de-pesquisa input {
+  width: 100%;
+  padding: 10px 45px 10px 15px; /* espaço à direita para o botão */
+  border-radius: 25px;
+  border: 1px solid #454e5a;
+  outline: none;
+  font-size: 16px;
+  background-color: #454e5a;
+
+ ;
+}
+
+.barra-de-pesquisa button {
+  position: absolute; /* sobrepõe o input */
+  right: 1px;        /* encosta no canto direito */
+  top: 50%;           /* centraliza verticalmente */
+  transform: translateY(-50%);
+  cursor: pointer;
+  padding: 0;
+  border-radius: 25px;
+  border:none;
+  height: 40px;
+  width: 40px;
+  background-color: #C71801;
+
+
+}
+
+.barra-de-pesquisa button img {
+  width: 20px;
+  height: 20px;
+  
+}
+
+h1{
+    text-align: center;
+    font-size: 15px;
+    font-family: 'inter', sans-serif;
+    width: 200px;
+    color: #C71801;
+    letter-spacing: 3px;
+    margin: 0 auto;
+    
+}
+
+.carrossel {
+    display: flex;
+    align-items: center;
+    position: relative;
+    display: flex;
+    justify-content: center; /* centraliza o conteúdo (imagem) */
+    align-items: center;
+    margin-top: 5px;
+}
+
+.imagem-container {
+    position: relative;
+    width: 268px;
+    height: 165px;
+    border-radius: 15px;
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+}
+
+.imagem-noticia {
+    width: 268px;
+    height: 165px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.seta-esquerda,
+.seta-direita {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.seta-esquerda {
+    left: 1px;
+}
+
+.seta-direita {
+    right: 1px;
+}
+
+.seta-esquerda img,
+.seta-direita img {
+    width: 20px;
+    height: 20px;
+}
+
+.legenda-ultimas-noticias{
+    position: absolute;
+    bottom: 0;
+    width: 262px;
+    color: #FFFFFF;
+    padding: 1px 3px;
+    background-color: rgba(217, 217, 217, 0.7);
+    border-bottom-left-radius: 10px; /* arredonda canto inferior esquerdo */
+    border-bottom-right-radius: 10px; /* arredonda canto inferior direito */
+    line-height: 0.9; /* altura da linha */
+    
+}
+
+.legenda-ultimas-noticias h2 {
+    font-size: 8px;
+    margin-bottom: 3px;
+    margin-top: 0;
+    
+}
+
+.legenda-ultimas-noticias p {
+    font-size: 7px;
+    margin-top: 0;
+    margin: 1px;
+}
+
+.hora-noticia {
+    display: flex;
+    margin-top: 5px;
+    color: #FF0000;
+    font-size: 9px;
+    font-weight: bold;
+    margin-left: 44px;
+}
+
+.sessao{
+  display: flex;
+  gap: 14px;
+  margin-left: 17px;
+  margin-top: 40px;
+}
+
+.sessao button{
+  border-radius: 30px;
+  width: 70px;
+  height: 35px;
+  border: none;
+  font-weight: 800;
+  font-size: 10px;
+  transition: 0.5px;
+}
+
+
+.sessao button:hover{
+  background-color: #C71801;
+  color: #FFFFFF;
+}
+
+.noticias{
+    margin-top: 27px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 20px;
+}
+
+.noticia {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding-bottom: 15px;
+}
+
+.imagens-noticias img {
+    width: 95px;
+    height: 105px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.legenda {
+    flex: 1;
+}
+
+.legenda h2 {
+    margin: 0;
+    font-size: 12px;
+    color: #C71801;
+}
+
+.legenda p {
+    margin: 10px 0;
+    line-height: 1.4;
+    color: #FFFFFF;
+    font-size: 10px;
+}
+
+.info {
+    display: flex;
+    gap: 90px;
+    font-size: 9px;
+    color: #C71801;
+}
+
+.botao-inicio{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 2px;
+    background:#1C2128;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+}
+
+.botao-inicio img { 
+    width: 50px;
+    height: 50px;
+}
+
+.botao-inicio button{
+    border-radius: 30px;
+    width: 75px;
+    height: 55px;
+    background-color: #C71801;
+    border: none;
+}
+

@@ -1,0 +1,197 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #000; 
+  color: #000;      
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+p{
+    color: #FFFFFF;
+    text-align: center;
+    font-style: 14px;
+    margin: 34px 50px;
+}
+
+
+
+.signup-container {
+  background: #1C2128;
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.05);
+  position: relative;
+  width: 398px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 886px;
+}
+
+.back-button {
+  display: flex;
+  position: absolute;
+  top: 30px;
+  left: 15px;
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: #000;
+  justify-content: start;
+  margin-bottom: 10px;
+ 
+}
+
+
+.logo img {
+  display:flex;
+  width: 108px;
+  height: 50px;
+  justify-content: space-around;
+  padding: 15px;
+  margin-top: 15px;
+
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+  font-family: "Roboto", sans-serif;
+  font-weight: 800;
+  font-size: 34px;
+  text-align: center;
+  margin-bottom: 25px;
+  margin-top: 80px;
+  margin-left: 0;
+  color: #FFFFFF;
+  max-width: 250px;
+}
+
+
+
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.signup-form label,
+.signup-form p,
+.signup-form .terms,
+.signup-form input,
+.signup-form button, 
+.signup-form a{
+  font-family: "Roboto", sans-serif;
+  font-weight: 800;
+
+}
+.signup-form small {
+  font-size: 8px;
+  margin-left: 13px;
+}
+
+
+.signup-form label {
+  color: #FFFFFF;
+  font-size: 20px;
+  margin-left:  138px;
+  margin-bottom: 100px;
+
+ 
+}
+
+
+.signup-form input[type="email"] {
+  display: flex;
+  margin-bottom: 32px;
+  border: 1.5px solid #FFFFFF;
+  border-radius: 10px;
+  font-size: 11px;
+  width: 320px;
+  height: 30px;
+  box-sizing: border-box;
+  background-color: #1C2128;
+  margin-left: 38px;
+  margin-top: 10px;
+  color: white;
+  margin-bottom: 40px;
+ 
+  
+}
+
+
+.signup-form input[type="text"]{
+  display: flex;
+  margin-bottom: 32px;
+  border: 1.5px solid #FFFFFF;
+  border-radius: 10px;
+  font-size: 11px;
+  width: 170px;
+  height: 30px;
+  box-sizing: border-box;
+  background-color: #1C2128;
+  margin: auto 113px;
+  color: white;
+
+  
+}
+.signup-form input[type = "email"]:hover {
+  width: 325px;
+}
+
+
+
+
+
+.resend, .confirm{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #FFFFFF;
+   
+
+}
+
+  
+
+
+.continue-button button{
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  gap: 0.5rem;
+  background: #1C2128;
+  border: 2px solid #FFFFFF;
+  border-radius: 11px;
+
+  font-size: 23px;
+  font-weight: 500;
+  width: 160px;
+  height: 45px;
+  margin: 40px auto;
+  cursor: pointer;
+  color: #FFFFFF;
+  flex-direction: row;
+ 
+
+
+}
+.continue-button button:hover {
+  background: #262b32
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

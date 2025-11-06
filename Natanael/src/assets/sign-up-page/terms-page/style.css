@@ -1,0 +1,73 @@
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #000; 
+  color: #000;      
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+
+
+
+.signup-container {
+  background: #1C2128;
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.05);
+  position: relative;
+  width: 398px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 886px;
+}
+
+.back-button {
+  display: flex;
+  position: absolute;
+  top: 30px;
+  left: 15px;
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: #000;
+  justify-content: start;
+  margin-bottom: 10px;
+ 
+}
+
+
+.logo img {
+  display:flex;
+  width: 108px;
+  height: 50px;
+  justify-content: space-around;
+  padding: 15px;
+  margin-top: 15px;
+
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+  font-family: "Roboto", sans-serif;
+  font-weight: 800;
+  font-size: 29px;
+  text-align: left;
+  margin-bottom: 25px;
+  margin-top: 15px;
+  margin-left: 0;
+  color: #FFFFFF;
+  width: 100%;
+}
+
+p{
+color: #FFFFFF;
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  margin: 0 20px 0 20px;
+  text-align: center;
+}
+
+
+
